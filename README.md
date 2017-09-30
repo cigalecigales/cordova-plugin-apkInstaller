@@ -57,7 +57,7 @@ Downloading apk file...<br>
 <br>
 <br>
 Start the installer !<br>
-![start the installer](https://github.com/cigalecigales/cordova-plugin-apkInstaller/wiki/images/image03.png)
+![start the installer](https://github.com/cigalecigales/cordova-plugin-apkInstaller/wiki/images/image04.png)
 
 ```js
 var element = document.getElementById(id);
