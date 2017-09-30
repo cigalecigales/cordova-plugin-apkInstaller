@@ -11,7 +11,7 @@ $ cordova plugin add https://github.com/cigalecigales/cordova-plugin-apkInstalle
 ```
 
 ## Supported Platforms
-Android only.
+Android only. (version 7.0.0 ~ )
 
 ## How to use
 ### Parameters
@@ -46,6 +46,7 @@ For details, please click here => [FileProvider](https://developer.android.com/r
 APKファイルのダウンロードは`cordova-plugin-file-transfer`等を用いてください。<br>
 <br>
 [ApkInstallerPluginSample](https://github.com/cigalecigales/ApkInstallerPluginSample)
+<br>
 <br>
 Click the INSTALL button.<br>
 ![top page](https://github.com/cigalecigales/cordova-plugin-apkInstaller/wiki/images/image01.png)
