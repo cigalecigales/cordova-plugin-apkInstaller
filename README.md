@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/cordova-plugin-apkinstaller.svg)](https://badge.fury.io/js/cordova-plugin-apkinstaller)
+
 # cordova-plugin-apkInstaller
 
 このプラグインはAPKファイルからインストーラーを
