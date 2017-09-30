@@ -1,0 +1,24 @@
+{
+  "name": "cordova-plugin-apkinstaller",
+  "version": "1.0.0",
+  "description": "Cordova Apk Installer Plugin.",
+  "main": "appInstaller.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cigalecigales/cordova-plugin-apkInstaller.git"
+  },
+  "keywords": [
+    "cordova",
+    "apk",
+    "installer"
+  ],
+  "author": "cigalecigales",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cigalecigales/cordova-plugin-apkInstaller/issues"
+  },
+  "homepage": "https://github.com/cigalecigales/cordova-plugin-apkInstaller#readme"
+}

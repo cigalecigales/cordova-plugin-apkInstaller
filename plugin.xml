@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-apkInstaller"
+    version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>Apk Installer</name>
+    <description>Cordova Apk Installer Plugin.</description>
+    <author>cigalecigales</author>
+    <keywords>cordova, apk, installer</keywords>
+    <license>Apache 2.0</license>
+    <repo>https://github.com/cigalecigales/cordova-plugin-apkInstaller.git</repo>
+    <issue>https://github.com/cigalecigales/cordova-plugin-apkInstaller/issues</issue>
+
+    <engines>
+        <engine name="cordova-android" version=">5.0.0"/>
+    </engines>
+    <js-module name="apkInstaller" src="www/apkInstaller.js">
+        <clobbers target="apkInstaller"/>
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="apkInstaller">
+                <param name="android-package" value="plugin.apkInstaller.ApkInstaller"/>
+            </feature>
+        </config-file>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <preference name="AndroidPersistentFileLocation" value="Internal" />
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <provider android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+                <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
+            </provider>
+        </config-file>
+        <source-file src="src/android/ApkInstaller.java" target-dir="src/plugin/apkInstaller/"/>
+        <source-file src="src/android/xml/file_paths.xml" target-dir="res/xml/"/>
+        <lib-file src="src/android/libs/android-support-v4.jar" />
+    </platform>
+</plugin>
