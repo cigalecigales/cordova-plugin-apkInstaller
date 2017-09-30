@@ -9,7 +9,7 @@ This plugin allows you to start the app installer.<br>
 ## Installation
 
 ```bash
-$ cordova plugin add https://github.com/cigalecigales/cordova-plugin-apkInstaller.git
+$ cordova plugin add cordova-plugin-apkinstaller
 ```
 
 ## Supported Platforms
