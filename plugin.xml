@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="cordova-plugin-apkInstaller"
-    version="1.0.1"
+    version="1.0.2"
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -31,6 +31,9 @@
             <provider android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
                 <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
             </provider>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
         </config-file>
         <source-file src="src/android/ApkInstaller.java" target-dir="src/plugin/apkInstaller/"/>
         <source-file src="src/android/xml/file_paths.xml" target-dir="res/xml/"/>
