@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-apkinstaller",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Cordova Apk Installer Plugin.",
   "main": "appInstaller.js",
   "scripts": {
