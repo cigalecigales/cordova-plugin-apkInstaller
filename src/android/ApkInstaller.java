@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.content.Context;
 import android.support.v4.content.FileProvider;
 import java.text.SimpleDateFormat;
+import android.util.Log;
 
 public class ApkInstaller extends CordovaPlugin {
 
@@ -20,11 +21,14 @@ public class ApkInstaller extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
         if (action.equals(ACTION_INSTALL)) {
-            String fileName = data.getString(0);
-            Context context = this.cordova.getActivity().getApplicationContext();
-            File file = new File(context.getFilesDir() + "/" + fileName);
-
             try {
+                String fileName = data.getString(0);
+                Context context = this.cordova.getActivity().getApplicationContext();
+                String filepath = context.getFilesDir() + "/" + fileName;
+                Log.d("apkInstaller", filepath);
+                File file = new File(context.getFilesDir() + "/" + fileName);
+
+            
                 // Get file uri
                 Uri uri = FileProvider.getUriForFile(context, context.getPackageName() + ".fileprovider", file);
                 Intent intent = new Intent(Intent.ACTION_VIEW);
